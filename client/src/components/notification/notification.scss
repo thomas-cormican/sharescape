@@ -1,0 +1,37 @@
+.notification {
+  display: flex;
+  padding: 20px;
+
+  &__type {
+    &__icon {
+      font-size: 30px;
+      padding: 0px 20px;
+
+      @media (max-width: 400px) {
+        padding: 0px 10px 0px 0px;
+      }
+    }
+  }
+
+  &__user {
+    &__image {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      object-fit: cover;
+    }
+
+    &__name {
+      font-weight: 700;
+    }
+  }
+
+  &__message {
+    margin: 10px 0px;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: grey;
+  }
+}

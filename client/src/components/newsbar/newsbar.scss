@@ -1,0 +1,55 @@
+.newsbar {
+  width: 100%;
+  background: rgb(247, 249, 249);
+  border-radius: 20px;
+  padding: 20px 0px;
+  margin-top: 20px;
+
+  & h3 {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+
+  & a,
+  a:visited,
+  a:hover,
+  a:active {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__block {
+    display: flex;
+    padding: 20px 20px;
+
+    &:hover {
+      background: rgb(204, 204, 204);
+    }
+  }
+  &__content {
+    flex: 3;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 600;
+    padding-right: 6px;
+  }
+
+  &__story {
+    font-size: 12px;
+  }
+
+  &__image {
+    flex-basis: 1;
+    height: 70px;
+    max-width: 70px;
+    border-radius: 10px;
+    overflow: hidden;
+
+    & img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

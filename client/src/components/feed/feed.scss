@@ -1,0 +1,39 @@
+.feed {
+  width: 100%;
+
+  &__heading {
+    font-size: 16px;
+    padding: 10px 15px;
+
+    & h2 {
+      font-weight: 600;
+    }
+  }
+
+  &__form {
+    border-bottom: 1px solid #eff3f4;
+  }
+
+  &__posts {
+    position: relative;
+
+    &__wrapper {
+      position: relative;
+    }
+  }
+
+  &__post:not(:first-child) {
+    border-top: 1px solid #eff3f4;
+  }
+
+  &__post {
+    &:last-child {
+      border-bottom: 1px solid #eff3f4;
+    }
+    &__link {
+      height: 100%;
+      width: 100%;
+      background: black;
+    }
+  }
+}

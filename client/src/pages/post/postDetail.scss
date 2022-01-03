@@ -1,0 +1,12 @@
+.postdetail {
+  & hr {
+    margin: 8px 0px;
+    border: none;
+    height: 1px;
+    background: #eff3f4;
+  }
+
+  &__comment {
+    border-bottom: 1px solid #eff3f4;
+  }
+}

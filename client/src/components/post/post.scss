@@ -1,0 +1,184 @@
+.post {
+  display: flex;
+
+  &__wrapper {
+    padding: 25px;
+    position: relative;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #eff3f4;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  &__user {
+    &__info {
+      display: flex;
+      margin-left: 2px;
+
+      & span {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 15px;
+      }
+    }
+
+    &__name {
+      font-weight: 700;
+      position: relative;
+      z-index: 500;
+    }
+    &__message {
+      word-break: break-word;
+    }
+
+    &__image {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      z-index: 500;
+      border-radius: 50px;
+      object-fit: cover;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__replyto {
+    font-size: 14px;
+    color: grey;
+    position: relative;
+    z-index: 500;
+    bottom: 10px;
+
+    &:hover {
+      color: lightgrey;
+    }
+  }
+
+  &__bottom {
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    & span,
+    & span a {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      z-index: 500;
+
+      & svg {
+        padding: 5px;
+        border-radius: 50px;
+      }
+
+      &:hover {
+        color: rgb(29, 155, 240);
+        & svg {
+          background: rgb(220, 232, 240);
+        }
+      }
+    }
+  }
+
+  &__stat {
+    font-size: 14px;
+    margin-left: 10px;
+  }
+
+  &__liked {
+    color: rgb(26, 140, 216);
+  }
+
+  &__date {
+    font-size: 14px;
+    color: grey;
+    margin-top: 10px;
+    margin-left: 2px;
+  }
+
+  &__menu {
+    position: absolute;
+    right: 0px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 2px (rgba(black, 0.2));
+    background: white;
+    transform: translateY(44%);
+    z-index: 2000;
+
+    &__button {
+      margin-top: 4px;
+      cursor: pointer;
+      z-index: 500;
+    }
+
+    & ul {
+      list-style: none;
+
+      & li {
+        cursor: pointer;
+
+        padding: 10px;
+        &:hover {
+          background: #f7f9f9;
+        }
+      }
+    }
+
+    &__overlay {
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+  }
+
+  &__overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.alert-enter {
+  opacity: 0;
+}
+.alert-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+.alert-exit {
+  opacity: 1;
+}
+.alert-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
