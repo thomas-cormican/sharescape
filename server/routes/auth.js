@@ -107,11 +107,15 @@ router.post("/login", async (req, res, next) => {
     if (username) {
       foundUser = await User.findOne({
         usernameLower: username.toLowerCase(),
-      }).select("+password");
+      })
+        .select("+password")
+        .populate({ path: "notifications", populate: "from" });
     } else {
       foundUser = await User.findOne({
         emailLower: email.toLowerCase(),
-      }).select("+password");
+      })
+        .select("+password")
+        .populate({ path: "notifications", populate: "from" });
     }
 
     const passwordSuccess = await bcrypt.compare(password, foundUser.password);
